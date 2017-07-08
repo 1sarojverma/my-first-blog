@@ -15,9 +15,7 @@ import dj_database_url
 
 # Update database configuration with $DATABASE_URL.
 
-db_from_env = dj_database_url.config(conn_max_age=500)
 
-DATABASES['default'].update(db_from_emv)
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -92,14 +90,17 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'database name from Heroku',
-        'USER': 'User name',
-        'PASSWORD': 'Paste the password here',
-        'HOST': 'add host here',
+        'NAME': 'd8an57gch3dg7m',
+        'USER': 'ikomtppdjcuojb',
+        'PASSWORD': '2d5ad66ed67ee97ac70b759ac1cb721c37d62353b2006d2130a95859690c9839',
+        'HOST': 'ec2-54-83-25-217.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 }
 
+db_from_env = dj_database_url.config(conn_max_age=500)
+
+DATABASES['default'].update(db_from_env)
 
 
 # Password validation
