@@ -18,6 +18,6 @@ application = get_wsgi_application()
 
 
 
-application = get_wsgi_application() – this line of code is already present
+application = get_wsgi_application()
 
 application = DjangoWhiteNoise(application)
